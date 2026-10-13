@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+/* =============================================================================
+   DESIGN TOKENS - change the look of the whole site from here.
+   Each --color-* line creates Tailwind classes, e.g. --color-brand-500 gives
+   bg-brand-500, text-brand-500, border-brand-500 ...
+   ============================================================================= */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Dark backgrounds (navbar, hero sections, footer) */
+  --color-navy-950: #040a1c;
+  --color-navy-900: #08112b;
+  --color-navy-800: #0d1a3f;
+  --color-navy-700: #152759;
+
+  /* Electric-blue accent (buttons, links, icons, active states) */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dce8ff;
+  --color-brand-200: #b9d1ff;
+  --color-brand-400: #4a8dff;
+  --color-brand-500: #1668ff;
+  --color-brand-600: #0d55e0;
+  --color-brand-700: #0a44b5;
+
+  /* Light page background behind white cards */
+  --color-surface: #f5f7fb;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-800 antialiased;
+  }
+
+  /* A clear focus ring for keyboard users on every interactive element. */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+/* =============================================================================
+   REUSABLE CLASSES - used across many components so a button or input looks
+   the same everywhere. Change one here and every page updates.
+   ============================================================================= */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Buttons: combine .btn with one colour variant, e.g. class="btn btn-primary" */
+  .btn {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-brand-500 text-white shadow-sm shadow-brand-500/30 hover:bg-brand-600;
+  }
+  .btn-outline-light {
+    @apply border border-white/40 text-white hover:border-white hover:bg-white/10;
+  }
+  .btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-700 hover:border-brand-400 hover:text-brand-600;
+  }
+
+  /* Form controls */
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-slate-700;
+  }
+  .input {
+    @apply block min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none;
+  }
+  .input-invalid {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-500/20;
+  }
+  .field-error {
+    @apply mt-1.5 text-xs font-medium text-red-600;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  /* Numbered form section headings: "1. Device Details" */
+  .section-title {
+    @apply mb-4 text-base font-semibold text-slate-900;
+  }
+}
+
+/* The glowing dark-blue background used by hero sections. */
+.hero-glow {
+  background:
+    radial-gradient(60% 90% at 78% 40%, rgb(22 104 255 / 0.38), transparent 70%),
+    radial-gradient(40% 60% at 10% 100%, rgb(22 104 255 / 0.16), transparent 70%),
+    linear-gradient(135deg, var(--color-navy-950), var(--color-navy-800));
+}
