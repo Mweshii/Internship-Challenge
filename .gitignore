@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Secrets - never commit real credentials (commit .env.example instead)
+.env
+.env.*
+!.env.example
+
+# Build output
+client/dist/
+
+# Customer photos uploaded through the forms (private data)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs and OS/editor files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
