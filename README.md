@@ -93,8 +93,8 @@ Built as a submission for the Golden Switch Technologies internship coding chall
 ### 2. Install
 
 ```bash
-git clone <your-repository-url>
-cd <repository-folder>
+git clone https://github.com/Mweshii/Internship-Challenge.git
+cd Internship-Challenge
 npm run install:all
 ```
 
