@@ -8,20 +8,26 @@
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  /* Dark backgrounds (navbar, hero sections, footer) */
-  --color-navy-950: #040a1c;
-  --color-navy-900: #08112b;
-  --color-navy-800: #0d1a3f;
-  --color-navy-700: #152759;
+  /* Dark backgrounds (navbar, hero sections, footer): near-black with a hint
+     of violet, matching the black behind the Nexura logo. */
+  --color-navy-950: #07050f;
+  --color-navy-900: #0d0a1e;
+  --color-navy-800: #171133;
+  --color-navy-700: #241a4d;
 
-  /* Electric-blue accent (buttons, links, icons, active states) */
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #dce8ff;
-  --color-brand-200: #b9d1ff;
-  --color-brand-400: #4a8dff;
-  --color-brand-500: #1668ff;
-  --color-brand-600: #0d55e0;
-  --color-brand-700: #0a44b5;
+  /* Violet-blue accent taken from the middle of the logo gradient
+     (buttons, links, icons, active states) */
+  --color-brand-50: #f3f0ff;
+  --color-brand-100: #e6e0ff;
+  --color-brand-200: #cdc2ff;
+  --color-brand-400: #8b6dff;
+  --color-brand-500: #6236f0;
+  --color-brand-600: #5126d4;
+  --color-brand-700: #401eab;
+
+  /* The two ends of the logo gradient: magenta and cyan */
+  --color-magenta-500: #ff0fa6;
+  --color-cyan-400: #12c8ff;
 
   /* Light page background behind white cards */
   --color-surface: #f5f7fb;
@@ -55,8 +61,9 @@
   .btn {
     @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60;
   }
+  /* Primary buttons use the logo gradient; hover darkens it slightly. */
   .btn-primary {
-    @apply bg-brand-500 text-white shadow-sm shadow-brand-500/30 hover:bg-brand-600;
+    @apply bg-linear-to-r from-magenta-500 via-brand-500 to-cyan-400 bg-size-[200%_100%] bg-left text-white shadow-sm shadow-brand-500/30 transition-all hover:bg-right;
   }
   .btn-outline-light {
     @apply border border-white/40 text-white hover:border-white hover:bg-white/10;
@@ -89,10 +96,19 @@
   }
 }
 
-/* The glowing dark-blue background used by hero sections. */
+/* The glowing dark background used by hero sections: a violet-blue glow on the
+   right and a magenta glow bottom-left, echoing the logo gradient. */
 .hero-glow {
   background:
-    radial-gradient(60% 90% at 78% 40%, rgb(22 104 255 / 0.38), transparent 70%),
-    radial-gradient(40% 60% at 10% 100%, rgb(22 104 255 / 0.16), transparent 70%),
+    radial-gradient(60% 90% at 78% 40%, rgb(98 54 240 / 0.4), transparent 70%),
+    radial-gradient(40% 60% at 10% 100%, rgb(255 15 166 / 0.18), transparent 70%),
     linear-gradient(135deg, var(--color-navy-950), var(--color-navy-800));
+}
+
+/* Text filled with the logo gradient (magenta -> violet -> blue -> cyan). */
+.text-brand-gradient {
+  background: linear-gradient(90deg, #ff0fa6, #8a2be2 35%, #3a5bff 70%, #12c8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

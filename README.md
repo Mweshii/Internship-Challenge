@@ -1,4 +1,4 @@
-# TechFix — Phone Repair, Accessories & Electronics
+# Nexura Technologies — Phone Repair, Accessories & Electronics
 
 A full-stack website for a phone repair and technology shop in Namibia. Customers can book a
 repair, shop for accessories and electronics, offer a device for sale and track their booking.
@@ -6,9 +6,9 @@ The business owner manages everything from a protected admin dashboard.
 
 Built as a submission for the Golden Switch Technologies internship coding challenge.
 
-> **"TechFix" is a placeholder brand.** The name, contact details, opening hours and product
-> catalogue are sample data. They are all changed from a handful of files — see
-> [Customising](#customising).
+> The business name, phone number and email are set in `client/src/config/site.js`. The address,
+> opening hours and product catalogue are still sample data. They are all changed from a handful
+> of files — see [Customising](#customising).
 
 ## Features
 

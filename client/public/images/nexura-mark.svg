@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 7 106 96">
+  <!-- Nexura "NX" monogram, traced from the original logo. Every shape is a
+       straight-edged polygon with its own gradient, so the colours flow
+       pink -> purple -> blue -> cyan the same way they do in the original. -->
+  <defs>
+    <linearGradient id="left-bar" gradientUnits="userSpaceOnUse" x1="0" y1="7" x2="0" y2="103">
+      <stop offset="0" stop-color="#fc039f"/>
+      <stop offset="0.24" stop-color="#ef01ac"/>
+      <stop offset="0.4" stop-color="#cb02ba"/>
+      <stop offset="0.55" stop-color="#a803bf"/>
+      <stop offset="0.71" stop-color="#8805c3"/>
+      <stop offset="1" stop-color="#9003bc"/>
+    </linearGradient>
+    <linearGradient id="rising-arm" gradientUnits="userSpaceOnUse" x1="20" y1="103" x2="65" y2="60">
+      <stop offset="0" stop-color="#e8019f"/>
+      <stop offset="0.15" stop-color="#da01a4"/>
+      <stop offset="0.36" stop-color="#a603bc"/>
+      <stop offset="0.57" stop-color="#730bc7"/>
+      <stop offset="0.75" stop-color="#610fd3"/>
+      <stop offset="1" stop-color="#5216d4"/>
+    </linearGradient>
+    <linearGradient id="main-diagonal" gradientUnits="userSpaceOnUse" x1="36" y1="7" x2="90" y2="103">
+      <stop offset="0" stop-color="#fc039f"/>
+      <stop offset="0.1" stop-color="#f701a3"/>
+      <stop offset="0.23" stop-color="#d700b2"/>
+      <stop offset="0.4" stop-color="#9f05c0"/>
+      <stop offset="0.5" stop-color="#7e03c3"/>
+      <stop offset="0.57" stop-color="#5216d4"/>
+      <stop offset="0.71" stop-color="#2138e3"/>
+      <stop offset="0.8" stop-color="#0465ef"/>
+      <stop offset="0.9" stop-color="#0080f4"/>
+      <stop offset="1" stop-color="#0394fe"/>
+    </linearGradient>
+    <linearGradient id="fold" gradientUnits="userSpaceOnUse" x1="72" y1="58" x2="110" y2="103">
+      <stop offset="0" stop-color="#5f2ae2"/>
+      <stop offset="0.37" stop-color="#1470f2"/>
+      <stop offset="0.6" stop-color="#0097fb"/>
+      <stop offset="0.84" stop-color="#00b9fc"/>
+      <stop offset="1" stop-color="#00befc"/>
+    </linearGradient>
+    <linearGradient id="second-diagonal" gradientUnits="userSpaceOnUse" x1="66" y1="7" x2="115" y2="85">
+      <stop offset="0" stop-color="#7c05d6"/>
+      <stop offset="0.15" stop-color="#6418da"/>
+      <stop offset="0.3" stop-color="#4a20dc"/>
+      <stop offset="0.48" stop-color="#2d2de3"/>
+      <stop offset="0.6" stop-color="#1a4cec"/>
+      <stop offset="0.74" stop-color="#0e6af7"/>
+      <stop offset="0.89" stop-color="#0080f5"/>
+      <stop offset="1" stop-color="#02a4fc"/>
+    </linearGradient>
+    <linearGradient id="falling-arm" gradientUnits="userSpaceOnUse" x1="112" y1="7" x2="95" y2="35">
+      <stop offset="0" stop-color="#6220e2"/>
+      <stop offset="1" stop-color="#4335ec"/>
+    </linearGradient>
+  </defs>
+
+  <!-- N: left vertical bar -->
+  <polygon fill="url(#left-bar)" points="16.5,7 30.5,7 30.5,103 16.5,103"/>
+  <!-- X: arm rising from the bottom-left (over the foot of the bar) into the main diagonal -->
+  <polygon fill="url(#rising-arm)" points="56,54 70,62 42,103 18,103"/>
+  <!-- N: main diagonal, from the top of the left bar to the bottom-right -->
+  <polygon fill="url(#main-diagonal)" points="30,7 42,7 112,103 89,103 30,20"/>
+  <!-- Lighter fold down the right side of the main diagonal, widening into the cyan foot -->
+  <polygon fill="url(#fold)" points="68,55 76.3,54.4 101.7,89 122,89 122,103 104,103"/>
+  <!-- X: arm falling from the top-right into the second diagonal -->
+  <polygon fill="url(#falling-arm)" points="100.5,7 122,7 99.4,40 87.5,22.5"/>
+  <!-- Second diagonal, parallel to the main one and cut off by the right edge -->
+  <polygon fill="url(#second-diagonal)" points="58,7 77,7 122,73 122,89 113,89"/>
+</svg>

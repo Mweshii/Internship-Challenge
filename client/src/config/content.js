@@ -23,7 +23,7 @@ export const services = [
 // About page. PLACEHOLDER wording - rewrite it in the business's own voice.
 export const about = {
   intro: [
-    'TechFix is a phone repair and technology shop. We fix phones and tablets, sell the accessories that protect them, and stock a range of everyday electronics.',
+    'Nexura Technologies is a phone repair and technology shop. We fix phones and tablets, sell the accessories that protect them, and stock a range of everyday electronics.',
     'This introduction is placeholder text. Replace it with the real story of the business: who runs it, when it started and what makes it different.',
   ],
   services: [

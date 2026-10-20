@@ -12,9 +12,9 @@ function Hero() {
       <div className="container-page grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
         <div>
           <h1 className="text-4xl leading-tight font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Your Phone<span className="text-brand-500">.</span>
+            Your Phone<span className="text-magenta-500">.</span>
             <br />
-            <span className="text-brand-400">Our Expertise.</span>
+            <span className="text-brand-gradient">Our Expertise.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-200">Repairs, accessories and more — all in one place.</p>
           <p className="mt-2 font-medium text-brand-400">{site.tagline}</p>

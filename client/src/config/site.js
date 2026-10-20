@@ -6,17 +6,17 @@
 // =============================================================================
 
 export const site = {
-  // The logo shows the two halves in different colours: "Tech" white, "Fix" blue.
-  name: 'TechFix',
-  nameStart: 'Tech',
-  nameEnd: 'Fix',
+  // The logo stacks the two halves: "NEXURA" large, "TECHNOLOGIES" small underneath.
+  name: 'Nexura Technologies',
+  nameStart: 'Nexura',
+  nameEnd: 'Technologies',
   tagline: 'Fast. Reliable. Affordable.',
 
   contact: {
-    phone: '+264 00 000 0000', // PLACEHOLDER
+    phone: '+264 81 846 2310',
     // WhatsApp number: digits only, with the country code and no "+" (used in the wa.me link).
-    whatsapp: '264000000000', // PLACEHOLDER
-    email: 'hello@example.com', // PLACEHOLDER
+    whatsapp: '264818462310',
+    email: 'nexuratech@gmail.com',
     addressLines: ['Shop address line 1', 'Suburb'], // PLACEHOLDER
     city: 'Windhoek, Namibia',
   },
